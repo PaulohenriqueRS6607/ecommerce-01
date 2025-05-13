@@ -1,7 +1,9 @@
 🛍️ E-commerce
+
 Uma aplicação de e-commerce desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários.
 
 📋 Sobre o Projeto
+
 E-commerce desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários.
 
 🚀 Tecnologias Utilizadas
