@@ -212,9 +212,9 @@ Fazer o pagamento, não precisa de corpo
 </div>
 
 
-<div style="background-color: #f0fff0; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h3 style="color: #2c3e50;">Tabelas do Banco de Dados</h3>
-  <pre style="color: #34495e;">
+<div style="background-color: #e6f7ff; padding: 20px; border-radius: 10px; margin: 20px 0;"> <h2 style="color: #2c3e50;">💾 Banco de Dados - MySQL</h2> <p style="color: #34495e;">O banco de dados utilizado é o <strong>livraria</strong>. Nele, existe uma tabela responsável pelo armazenamento das informações dos livros desejados. A tabela contém os seguintes campos:</p> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: PROCEDURE</h3> <pre style="color: #34495e;"> 
+
+
 tb_categoria
 
 tb_item_pedido
@@ -226,8 +226,8 @@ tb_pedido
 tb_produto
 
 tb_usuario
-</pre>
-</div>
+
+</div> </div>
 
 
 <div style="background-color: #e6f7ff; padding: 20px; border-radius: 10px; margin: 20px 0;"> <h2 style="color: #2c3e50;">💾 Banco de Dados - MySQL</h2> <p style="color: #34495e;">O banco de dados utilizado é o <strong>livraria</strong>. Nele, existe uma tabela responsável pelo armazenamento das informações dos livros desejados. A tabela contém os seguintes campos:</p> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: PROCEDURE</h3> <pre style="color: #34495e;"> 
