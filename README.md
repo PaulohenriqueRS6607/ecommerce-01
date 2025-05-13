@@ -218,7 +218,7 @@ Fazer o pagamento, não precisa de corpo
   <p style="color: #34495e;">O banco de dados utilizado é o <strong>ecommerce</strong>. Nele, existem varias tabelas e uma procedure para alterar status dos pedidos/p>
 
   <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;">
-    <h3 style="color: #2c3e50;">Tabela: livros</h3>
+    <h3 style="color: #2c3e50;">Tabela: procedure</h3>
     <pre style="color: #34495e;">
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `atualizar_status_pedidos`()
