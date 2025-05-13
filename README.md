@@ -210,3 +210,24 @@ Fazer o pagamento, não precisa de corpo
 }</pre>
   </div>
 </div>
+
+
+
+<div style="background-color: #e6f7ff; padding: 20px; border-radius: 10px; margin: 20px 0;">
+  <h2 style="color: #2c3e50;">💾 Banco de Dados - MySQL</h2>
+  <p style="color: #34495e;">O banco de dados utilizado é o <strong>ecommerce</strong>. Nele, existem varias tabelas e uma procedure para alterar status dos pedidos/p>
+
+  <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;">
+    <h3 style="color: #2c3e50;">Tabela: livros</h3>
+    <pre style="color: #34495e;">
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `atualizar_status_pedidos`()
+BEGIN
+    UPDATE tb_pedido
+    SET status = 4
+    WHERE status = 0
+    AND momento <= DATE_SUB(NOW(), INTERVAL 3 DAY);
+END
+
+  </div>
+</div>
