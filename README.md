@@ -154,36 +154,6 @@ Fazer o pagamento, não precisa de corpo
 
 
 
-🎨 Exemplos de Requisições
-Criar Usuário
-{
-    "nome": "amanda ferreira",
-    "email": "amanda@email.com",
-    "telefone": "40028922",
-    "senha": "112233445566"
-}
-
-Criar Produto
-{
-    "nome": "nintendo switch 2",
-    "descricao": "Console da mais recente geração",
-    "preco": 4.499,90,
-    "imagemUrl": "https://exemplo.com/switch2.jpg"
-}
-
-Criar Pedido
-{
-    "cliente": {
-        "id": 1
-    },
-    "items": [
-        {
-            "produtoId": 1,
-            "quantidade": 2,
-            "preco": 4.499,90
-        }
-    ]
-}
 
 <div style="background-color: #f0ffff; padding: 20px; border-radius: 10px; margin: 20px 0;">
   <h2 style="color: #2c3e50;">🎨 Exemplos de Requisições</h2>
@@ -192,10 +162,10 @@ Criar Pedido
     <h3 style="color: #2c3e50;">Criar Usuário</h3>
     <pre style="color: #34495e;">
 {
-    "nome": "João Silva",
-    "email": "joao@email.com",
-    "telefone": "11999999999",
-    "senha": "123456"
+    "nome": "amanda ferreira",
+    "email": "amanda@email.com",
+    "telefone": "40028922",
+    "senha": "112233445566"
 }</pre>
   </div>
 
@@ -203,10 +173,10 @@ Criar Pedido
     <h3 style="color: #2c3e50;">Criar Produto</h3>
     <pre style="color: #34495e;">
 {
-    "nome": "Smartphone XYZ",
-    "descricao": "Smartphone de última geração",
-    "preco": 1999.99,
-    "imagemUrl": "https://exemplo.com/smartphone.jpg"
+    "nome": "nintendo switch 2",
+    "descricao": "Console da mais recente geração",
+    "preco": 4.499,90,
+    "imagemUrl": "https://exemplo.com/switch2.jpg"
 }</pre>
   </div>
 
@@ -218,10 +188,10 @@ Criar Pedido
         "id": 1
     },
     "items": [
-        {
+       {
             "produtoId": 1,
             "quantidade": 2,
-            "preco": 1999.99
+            "preco": 4.499,90
         }
     ]
 }</pre>
