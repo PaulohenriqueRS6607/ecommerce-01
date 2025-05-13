@@ -1,162 +1,162 @@
 🛍️ E-commerce Spring Boot
-A robust e-commerce application built with Spring Boot for managing products, orders, and users. This project provides a RESTful API with secure authentication and comprehensive CRUD operations.
+Uma aplicação de e-commerce robusta desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários. Este projeto oferece uma API RESTful com autenticação segura e operações CRUD completas.
 
-📋 Project Overview
-This is a backend e-commerce system developed to handle user management, product catalog, order processing, and payment operations. It leverages modern Java technologies and follows best practices for scalability and maintainability.
+📋 Sobre o Projeto
+Este é um sistema de e-commerce backend projetado para gerenciar usuários, catálogo de produtos, processamento de pedidos e operações de pagamento. Utiliza tecnologias modernas de Java e segue boas práticas para escalabilidade e manutenção.
 
-🚀 Technologies Used
-
-
-Java 21: Modern Java version for enhanced performance and features.
-Spring Boot 3.1.0: Framework for building production-ready applications.
-Spring Data JPA: Simplifies database interactions with ORM.
-MySQL 8.0: Relational database for persistent storage.
-Maven: Dependency management and build automation.
+🚀 Tecnologias Utilizadas
 
 
-🛠️ Features
-
-✅ User Management: Register, list, update, and delete users.
-🛒 Product Management: Create, list, update, and delete products.
-📦 Order Management: Place, list, update, and delete orders, including client-specific order retrieval.
-🔐 Authentication: Secure user authentication for protected endpoints.
-💸 Payment Processing: Process payments for orders.
+Java 21: Versão moderna do Java para melhor desempenho e funcionalidades.
+Spring Boot 3.1.0: Framework para construção de aplicações prontas para produção.
+Spring Data JPA: Simplifica interações com banco de dados usando ORM.
+MySQL 8.0: Banco de dados relacional para armazenamento persistente.
+Maven: Gerenciamento de dependências e automação de build.
 
 
-📝 API Endpoints
-👨‍👦‍👦 Users
+🛠️ Funcionalidades
+
+✅ Gerenciamento de Usuários: Cadastro, listagem, atualização e exclusão de usuários.
+🛒 Gerenciamento de Produtos: Criação, listagem, atualização e exclusão de produtos.
+📦 Gerenciamento de Pedidos: Criação, listagem, atualização e exclusão de pedidos, incluindo recuperação de pedidos por cliente.
+🔐 Autenticação: Autenticação segura de usuários para endpoints protegidos.
+💸 Processamento de Pagamentos: Processamento de pagamentos para pedidos.
+
+
+📝 Endpoints da API
+👨‍👦‍👦 Usuários
 
 
 
-Method
+Método
 Endpoint
-Description
+Descrição
 
 
 
 POST
 /usuario/salvar
-Create a new user
+Criar um novo usuário
 
 
 GET
 /usuarios
-List all users
+Listar todos os usuários
 
 
 GET
 /usuarios/{id}
-Get user by ID
+Buscar usuário por ID
 
 
 PUT
 /usuarios/{id}
-Update user
+Atualizar usuário
 
 
 DELETE
 /usuarios/{id}
-Delete user
+Excluir usuário
 
 
-🛒 Products
+🛒 Produtos
 
 
 
-Method
+Método
 Endpoint
-Description
+Descrição
 
 
 
 POST
 /produtos
-Create a new product
+Criar um novo produto
 
 
 GET
 /produtos
-List all products
+Listar todos os produtos
 
 
 GET
 /produtos/{id}
-Get product by ID
+Buscar produto por ID
 
 
 PUT
 /produtos/{id}
-Update product
+Atualizar produto
 
 
 DELETE
 /produtos/{id}
-Delete product
+Excluir produto
 
 
-📦 Orders
+📦 Pedidos
 
 
 
-Method
+Método
 Endpoint
-Description
+Descrição
 
 
 
 POST
 /pedidos
-Create a new order
+Criar um novo pedido
 
 
 GET
 /pedidos
-List all orders
+Listar todos os pedidos
 
 
 GET
 /pedidos/{id}
-Get order by ID
+Buscar pedido por ID
 
 
 PUT
 /pedidos/{id}
-Update order
+Atualizar pedido
 
 
 DELETE
 /pedidos/{id}
-Delete order
+Excluir pedido
 
 
 GET
 /pedidos/cliente/{clienteId}
-List orders by client
+Listar pedidos por cliente
 
 
 GET
 /pedidos/{id}/itens
-List items in an order
+Listar itens de um pedido
 
 
-💸 Payments
+💸 Pagamentos
 
 
 
-Method
+Método
 Endpoint
-Description
+Descrição
 
 
 
 POST
 /pagamentos/pedido/{id}
-Process payment for order
+Processar pagamento do pedido
 
 
 
-🎨 Example Requests
-Create User
+🎨 Exemplos de Requisições
+Criar Usuário
 {
     "nome": "Amanda Ferreira",
     "email": "amanda@email.com",
@@ -164,7 +164,7 @@ Create User
     "senha": "112233445566"
 }
 
-Create Product
+Criar Produto
 {
     "nome": "Nintendo Switch 2",
     "descricao": "Console da mais recente geração",
@@ -172,7 +172,7 @@ Create Product
     "imagemUrl": "https://exemplo.com/switch2.jpg"
 }
 
-Create Order
+Criar Pedido
 {
     "cliente": {
         "id": 1
@@ -187,58 +187,27 @@ Create Order
 }
 
 
-🛠️ Setup Instructions
-Prerequisites
+🛠️ Instruções de Configuração
+Pré-requisitos
 
 Java 21
 MySQL 8.0
 Maven
 
-Steps
+Passos
 
-Clone the Repository
-git clone https://github.com/your-username/ecommerce-spring-boot.git
+Clonar o Repositório
+git clone https://github.com/seu-usuario/ecommerce-spring-boot.git
 cd ecommerce-spring-boot
 
 
-Configure MySQL
+Configurar o MySQL
 
-Create a MySQL database named ecommerce.
-Update application.properties with your database credentials:spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
-spring.datasource.username=your-username
-spring.datasource.password=your-password
+Crie um banco de dados MySQL chamado ecommerce.
+Atualize o arquivo application.properties com suas credenciais do banco:spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+spring.datasource.username=seu-usuario
+spring.datasource.password=sua-
 spring.jpa.hibernate.ddl-auto=update
 
 
 
-
-Build and Run
-mvn clean install
-mvn spring-boot:run
-
-
-Access the API
-
-The application runs on http://localhost:8080.
-
-
-
-
-📚 Documentation
-For detailed API documentation, refer to the Postman Collection or test the endpoints directly using tools like Postman or cURL.
-
-🤝 Contributing
-Contributions are welcome! Please follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -m 'Add your feature').
-Push to the branch (git push origin feature/your-feature).
-Open a Pull Request.
-
-
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-📬 Contact
-For questions or feedback, feel free to reach out via email or open an issue on GitHub.
