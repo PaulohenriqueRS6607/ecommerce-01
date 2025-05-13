@@ -1,29 +1,28 @@
-🛍️ E-commerce Spring Boot
-Uma aplicação de e-commerce robusta desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários. Este projeto oferece uma API RESTful com autenticação segura e operações CRUD completas.
+🛍️ E-commerce
+Uma aplicação de e-commerce desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários.
 
 📋 Sobre o Projeto
-Este é um sistema de e-commerce backend projetado para gerenciar usuários, catálogo de produtos, processamento de pedidos e operações de pagamento. Utiliza tecnologias modernas de Java e segue boas práticas para escalabilidade e manutenção.
+E-commerce desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários.
 
 🚀 Tecnologias Utilizadas
 
 
-Java 21: Versão moderna do Java para melhor desempenho e funcionalidades.
-Spring Boot 3.1.0: Framework para construção de aplicações prontas para produção.
-Spring Data JPA: Simplifica interações com banco de dados usando ORM.
-MySQL 8.0: Banco de dados relacional para armazenamento persistente.
-Maven: Gerenciamento de dependências e automação de build.
+Java 21
+Spring Boot 3.1.0
+Spring Data JPA
+MySQL 8.0
+Maven
 
 
 🛠️ Funcionalidades
 
-✅ Gerenciamento de Usuários: Cadastro, listagem, atualização e exclusão de usuários.
-🛒 Gerenciamento de Produtos: Criação, listagem, atualização e exclusão de produtos.
-📦 Gerenciamento de Pedidos: Criação, listagem, atualização e exclusão de pedidos, incluindo recuperação de pedidos por cliente.
-🔐 Autenticação: Autenticação segura de usuários para endpoints protegidos.
-💸 Processamento de Pagamentos: Processamento de pagamentos para pedidos.
+✅ Cadastro de usuários
+🛒 Gerenciamento de produtos
+📦 Controle de pedidos
+🔐 Autenticação de usuários
 
 
-📝 Endpoints da API
+📝 Endpoints
 👨‍👦‍👦 Usuários
 
 
@@ -35,28 +34,28 @@ Descrição
 
 
 POST
-/usuario/salvar
-Criar um novo usuário
+http://localhost:8080/usuario/salvar
+Criar usuário
 
 
 GET
-/usuarios
-Listar todos os usuários
+http://localhost:8080/usuario
+Listar usuários
 
 
 GET
-/usuarios/{id}
+http://localhost:8080/usuario/{id}
 Buscar usuário por ID
 
 
 PUT
-/usuarios/{id}
+http://localhost:8080/usuario/{id}
 Atualizar usuário
 
 
 DELETE
-/usuarios/{id}
-Excluir usuário
+http://localhost:8080/usuario/{id}
+Deletar usuário
 
 
 🛒 Produtos
@@ -70,28 +69,28 @@ Descrição
 
 
 POST
-/produtos
-Criar um novo produto
+http://localhost:8080/produtos
+Criar produto
 
 
 GET
-/produtos
-Listar todos os produtos
+http://localhost:8080/produtos
+Listar produtos
 
 
 GET
-/produtos/{id}
+http://localhost:8080/produtos/{id}
 Buscar produto por ID
 
 
 PUT
-/produtos/{id}
+http://localhost:8080/produtos/{id}
 Atualizar produto
 
 
 DELETE
-/produtos/{id}
-Excluir produto
+http://localhost:8080/produtos/{id}
+Deletar produto
 
 
 📦 Pedidos
@@ -105,41 +104,41 @@ Descrição
 
 
 POST
-/pedidos
-Criar um novo pedido
+http://localhost:8080/pedidos
+Criar pedido
 
 
 GET
-/pedidos
-Listar todos os pedidos
+http://localhost:8080/pedidos
+Listar pedidos
 
 
 GET
-/pedidos/{id}
+http://localhost:8080/pedidos/{id}
 Buscar pedido por ID
 
 
 PUT
-/pedidos/{id}
+http://localhost:8080/pedidos/{id}
 Atualizar pedido
 
 
 DELETE
-/pedidos/{id}
-Excluir pedido
+http://localhost:8080/pedidos/{id}
+Deletar pedido
 
 
 GET
-/pedidos/cliente/{clienteId}
-Listar pedidos por cliente
+http://localhost:8080/pedidos/cliente/{clienteId}
+Listar pedidos do cliente
 
 
 GET
-/pedidos/{id}/itens
-Listar itens de um pedido
+http://localhost:8080/pedidos/{id}/itens
+Listar itens do pedido
 
 
-💸 Pagamentos
+💸 Pagamento
 
 
 
@@ -150,15 +149,15 @@ Descrição
 
 
 POST
-/pagamentos/pedido/{id}
-Processar pagamento do pedido
+http://localhost:8080/pagamentos/pedido/{id}
+Fazer o pagamento, não precisa de corpo
 
 
 
 🎨 Exemplos de Requisições
 Criar Usuário
 {
-    "nome": "Amanda Ferreira",
+    "nome": "amanda ferreira",
     "email": "amanda@email.com",
     "telefone": "40028922",
     "senha": "112233445566"
@@ -166,9 +165,9 @@ Criar Usuário
 
 Criar Produto
 {
-    "nome": "Nintendo Switch 2",
+    "nome": "nintendo switch 2",
     "descricao": "Console da mais recente geração",
-    "preco": 4499.90,
+    "preco": 4.499,90,
     "imagemUrl": "https://exemplo.com/switch2.jpg"
 }
 
@@ -181,7 +180,7 @@ Criar Pedido
         {
             "produtoId": 1,
             "quantidade": 2,
-            "preco": 4499.90
+            "preco": 4.499,90
         }
     ]
 }
@@ -206,8 +205,39 @@ Configurar o MySQL
 Crie um banco de dados MySQL chamado ecommerce.
 Atualize o arquivo application.properties com suas credenciais do banco:spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
 spring.datasource.username=seu-usuario
-spring.datasource.password=sua-
+spring.datasource.password=sua-senha
 spring.jpa.hibernate.ddl-auto=update
 
 
 
+
+Compilar e Executar
+mvn clean install
+mvn spring-boot:run
+
+
+Acessar a API
+
+A aplicação estará disponível em http://localhost:8080.
+
+
+
+
+📚 Documentação
+Para documentação detalhada da API, teste os endpoints usando ferramentas como Postman ou cURL.
+
+🤝 Contribuição
+Contribuições são bem-vindas! Siga os passos abaixo:
+
+Faça um fork do repositório.
+Crie uma nova branch (git checkout -b feature/sua-funcionalidade).
+Commit suas alterações (git commit -m 'Adiciona sua funcionalidade').
+Envie para a branch (git push origin feature/sua-funcionalidade).
+Abra um Pull Request.
+
+
+📄 Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+📬 Contato
+Para dúvidas ou feedback, abra uma issue no GitHub.
