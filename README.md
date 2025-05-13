@@ -232,8 +232,6 @@ INT
 preco_unitario
 DECIMAL(10, 2)
 
-total
-DECIMAL(10, 2)</pre>
 
 </div> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_pagamento</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY
 pedido_id
