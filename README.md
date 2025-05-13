@@ -213,21 +213,4 @@ Fazer o pagamento, não precisa de corpo
 
 
 
-<div style="background-color: #e6f7ff; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h2 style="color: #2c3e50;">💾 Banco de Dados - MySQL</h2>
-  <p style="color: #34495e;">O banco de dados utilizado é o <strong>ecommerce</strong>. Nele, existem varias tabelas e uma procedure para alterar status dos pedidos/p>
-
-  <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;">
-    <h3 style="color: #2c3e50;">Tabela: procedure</h3>
-    <pre style="color: #34495e;">
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `atualizar_status_pedidos`()
-BEGIN
-    UPDATE tb_pedido
-    SET status = 4
-    WHERE status = 0
-    AND momento <= DATE_SUB(NOW(), INTERVAL 3 DAY);
-END
-
-  </div>
-</div>
+<div style="background-color: #e6f7ff; padding: 20px; border-radius: 10px; margin: 20px 0;"> <h2 style="color: #2c3e50;">💾 Banco de Dados - MySQL</h2> <p style="color: #34495e;">O banco de dados utilizado contém várias tabelas para gerenciar os dados da livraria e seus processos. A seguir estão as tabelas e seus respectivos campos:</p> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_categoria</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY nome VARCHAR(255) descricao TEXT</pre> </div> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_item_pedido</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY pedido_id INT produto_id INT quantidade INT preco_unitario DECIMAL(10, 2) total DECIMAL(10, 2)</pre> </div> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_pagamento</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY pedido_id INT data_pagamento DATETIME valor_pago DECIMAL(10, 2) metodo_pagamento VARCHAR(100) status_pagamento VARCHAR(50)</pre> </div> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_pedido</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY usuario_id INT data_pedido DATETIME status_pedido VARCHAR(100) total DECIMAL(10, 2)</pre> </div> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_produto</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY titulo VARCHAR(255) descricao TEXT preco DECIMAL(10, 2) quantidade_estoque INT categoria_id INT</pre> </div> <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; margin: 10px 0;"> <h3 style="color: #2c3e50;">Tabela: tb_usuario</h3> <pre style="color: #34495e;"> id INT AUTO_INCREMENT PRIMARY KEY nome VARCHAR(255) email VARCHAR(255) senha VARCHAR(255) endereco VARCHAR(255) telefone VARCHAR(20)</pre> </div> </div>
