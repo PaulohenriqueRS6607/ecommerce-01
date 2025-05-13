@@ -10,27 +10,38 @@ E-commerce desenvolvida com Spring Boot para gerenciamento de produtos, pedidos 
 
 
 Java 21
+
 Spring Boot 3.1.0
+
 Spring Data JPA
+
 MySQL 8.0
+
 Maven
 
 
 🛠️ Funcionalidades
 
 ✅ Cadastro de usuários
+
 🛒 Gerenciamento de produtos
+
 📦 Controle de pedidos
+
 🔐 Autenticação de usuários
 
 
 📝 Endpoints
+
+
 👨‍👦‍👦 Usuários
 
 
 
 Método
+
 Endpoint
+
 Descrição
 
 
