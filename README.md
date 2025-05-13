@@ -227,23 +227,3 @@ Criar Pedido
 }</pre>
   </div>
 </div>
-
-<div style="background-color: #ffe4e1; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h2 style="color: #2c3e50;">🚀 Como Executar</h2>
-  <ol style="color: #34495e;">
-    <li>Clone o repositório</li>
-    <li>Configure o banco de dados no `application.properties`</li>
-    <li>Execute o projeto:
-      <pre>mvn spring-boot:run</pre>
-    </li>
-  </ol>
-</div>
-
-<div style="background-color: #e6e6fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h2 style="color: #2c3e50;">📊 Status do Projeto</h2>
-  <div style="display: flex; gap: 10px;">
-    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status">
-    <img src="https://img.shields.io/badge/Java-21-blue" alt="Java">
-    <img src="https://img.shields.io/badge/Spring%20Boot-3.1.0-green" alt="Spring Boot">
-  </div>
-</div>
