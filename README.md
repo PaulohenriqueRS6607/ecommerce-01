@@ -1,66 +1,178 @@
-🛍️ E-commerce
+🛍️ E-commerce Spring Boot
+A robust e-commerce application built with Spring Boot for managing products, orders, and users. This project provides a RESTful API with secure authentication and comprehensive CRUD operations.
 
-📋 Sobre o Projeto
-E-commerce desenvolvida com Spring Boot para gerenciamento de produtos, pedidos e usuários.
+📋 Project Overview
+This is a backend e-commerce system developed to handle user management, product catalog, order processing, and payment operations. It leverages modern Java technologies and follows best practices for scalability and maintainability.
 
-🚀 Tecnologias Utilizadas
-Java 21
-Spring Boot 3.1.0
-Spring Data JPA
-MySQL 8.0
-Maven
+🚀 Technologies Used
 
-🛠️ Funcionalidades
-✅ Cadastro de usuários
-🛒 Gerenciamento de produtos
-📦 Controle de pedidos
-🔐 Autenticação de usuários
-📝 Endpoints
 
-👨‍👦‍👦 Usuários
-POST http://localhost:8080/usuario/salvar - Criar usuário
-GET http://localhost:8080/usuarios - Listar usuários
-GET http://localhost:8080/usuarios/{id} - Buscar usuário por ID
-PUT http://localhost:8080/usuarios/{id} - Atualizar usuário
-DELETE http://localhost:8080/usuarios/{id} - Deletar usuário
+Java 21: Modern Java version for enhanced performance and features.
+Spring Boot 3.1.0: Framework for building production-ready applications.
+Spring Data JPA: Simplifies database interactions with ORM.
+MySQL 8.0: Relational database for persistent storage.
+Maven: Dependency management and build automation.
 
-🛒 Produtos
-POST http://localhost:8080/produtos - Criar produto
-GET http://localhost:8080/produtos - Listar produtos
-GET http://localhost:8080/produtos/{id} - Buscar produto por ID
-PUT http://localhost:8080/produtos/{id} - Atualizar produto
-DELETE http://localhost:8080/produtos/{id} - Deletar produto
 
-📦 Pedidos
-POST http://localhost:8080/pedidos - Criar pedido
-GET http://localhost:8080/pedidos - Listar pedidos
-GET http://localhost:8080/pedidos/{id} - Buscar pedido por ID
-PUT http://localhost:8080/pedidos/{id} - Atualizar pedido
-DELETE http://localhost:8080/pedidos/{id} - Deletar pedido
-GET http://localhost:8080/pedidos/cliente/{clienteId} - Listar pedidos do cliente
-GET http://localhost:8080/pedidos/{id}/itens - Listar itens do pedido
+🛠️ Features
 
-💸 Pagamento
-POST http://localhost:8080/pagamentos/pedido/{id} - Fazer o pagamento, não precisa de corpo
-    
-🎨 Exemplos de Requisições
-Criar Usuário
+✅ User Management: Register, list, update, and delete users.
+🛒 Product Management: Create, list, update, and delete products.
+📦 Order Management: Place, list, update, and delete orders, including client-specific order retrieval.
+🔐 Authentication: Secure user authentication for protected endpoints.
+💸 Payment Processing: Process payments for orders.
+
+
+📝 API Endpoints
+👨‍👦‍👦 Users
+
+
+
+Method
+Endpoint
+Description
+
+
+
+POST
+/usuario/salvar
+Create a new user
+
+
+GET
+/usuarios
+List all users
+
+
+GET
+/usuarios/{id}
+Get user by ID
+
+
+PUT
+/usuarios/{id}
+Update user
+
+
+DELETE
+/usuarios/{id}
+Delete user
+
+
+🛒 Products
+
+
+
+Method
+Endpoint
+Description
+
+
+
+POST
+/produtos
+Create a new product
+
+
+GET
+/produtos
+List all products
+
+
+GET
+/produtos/{id}
+Get product by ID
+
+
+PUT
+/produtos/{id}
+Update product
+
+
+DELETE
+/produtos/{id}
+Delete product
+
+
+📦 Orders
+
+
+
+Method
+Endpoint
+Description
+
+
+
+POST
+/pedidos
+Create a new order
+
+
+GET
+/pedidos
+List all orders
+
+
+GET
+/pedidos/{id}
+Get order by ID
+
+
+PUT
+/pedidos/{id}
+Update order
+
+
+DELETE
+/pedidos/{id}
+Delete order
+
+
+GET
+/pedidos/cliente/{clienteId}
+List orders by client
+
+
+GET
+/pedidos/{id}/itens
+List items in an order
+
+
+💸 Payments
+
+
+
+Method
+Endpoint
+Description
+
+
+
+POST
+/pagamentos/pedido/{id}
+Process payment for order
+
+
+
+🎨 Example Requests
+Create User
 {
-    "nome": "amanda ferreira",
+    "nome": "Amanda Ferreira",
     "email": "amanda@email.com",
     "telefone": "40028922",
     "senha": "112233445566"
 }
 
-Criar Produto
+Create Product
 {
-    "nome": "nintendo switch 2",
+    "nome": "Nintendo Switch 2",
     "descricao": "Console da mais recente geração",
-    "preco": 4.499,90,
+    "preco": 4499.90,
     "imagemUrl": "https://exemplo.com/switch2.jpg"
 }
 
-Criar Pedido
+Create Order
 {
     "cliente": {
         "id": 1
@@ -69,7 +181,64 @@ Criar Pedido
         {
             "produtoId": 1,
             "quantidade": 2,
-            "preco": 4.499,90
+            "preco": 4499.90
         }
     ]
 }
+
+
+🛠️ Setup Instructions
+Prerequisites
+
+Java 21
+MySQL 8.0
+Maven
+
+Steps
+
+Clone the Repository
+git clone https://github.com/your-username/ecommerce-spring-boot.git
+cd ecommerce-spring-boot
+
+
+Configure MySQL
+
+Create a MySQL database named ecommerce.
+Update application.properties with your database credentials:spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+spring.datasource.username=your-username
+spring.datasource.password=your-password
+spring.jpa.hibernate.ddl-auto=update
+
+
+
+
+Build and Run
+mvn clean install
+mvn spring-boot:run
+
+
+Access the API
+
+The application runs on http://localhost:8080.
+
+
+
+
+📚 Documentation
+For detailed API documentation, refer to the Postman Collection or test the endpoints directly using tools like Postman or cURL.
+
+🤝 Contributing
+Contributions are welcome! Please follow these steps:
+
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m 'Add your feature').
+Push to the branch (git push origin feature/your-feature).
+Open a Pull Request.
+
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+📬 Contact
+For questions or feedback, feel free to reach out via email or open an issue on GitHub.
